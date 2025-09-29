@@ -27,16 +27,29 @@ form input {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-form button {
+form button#add-btn {
     padding: 8px 16px;
-    background: #007bff;
+    background: #28a745;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
 }
-form button:hover {
-    background: #0056b3;
+form button#add-btn:hover {
+    background: #218838;
+}
+form button#reset-btn {
+    padding: 8px 16px;
+    background: #ffc107;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+form button#reset-btn:hover {
+    background: #e0a800;
 }
 table {
     width: 100%;

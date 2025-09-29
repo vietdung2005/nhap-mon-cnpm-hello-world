@@ -20,6 +20,7 @@ function renderBooks() {
     });
 }
 
+
 bookForm.onsubmit = function(e) {
     e.preventDefault();
     const title = document.getElementById('title').value.trim();
@@ -28,12 +29,18 @@ bookForm.onsubmit = function(e) {
     if (editIndex !== null) {
         books[editIndex] = { title, author, year };
         editIndex = null;
-        bookForm.querySelector('button[type="submit"]').textContent = 'Thêm sách';
+        document.getElementById('add-btn').textContent = 'Thêm sách';
     } else {
         books.push({ title, author, year });
     }
     bookForm.reset();
     renderBooks();
+};
+
+document.getElementById('reset-btn').onclick = function() {
+    bookForm.reset();
+    editIndex = null;
+    document.getElementById('add-btn').textContent = 'Thêm sách';
 };
 
 window.editBook = function(idx) {
@@ -42,7 +49,7 @@ window.editBook = function(idx) {
     document.getElementById('author').value = book.author;
     document.getElementById('year').value = book.year;
     editIndex = idx;
-    bookForm.querySelector('button[type="submit"]').textContent = 'Cập nhật';
+    document.getElementById('add-btn').textContent = 'Cập nhật';
 };
 
 window.deleteBook = function(idx) {
