@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sách</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quản Lý Sách</h1>
+        <form id="book-form">
+            <input type="text" id="title" placeholder="Tên sách" required>
+            <input type="text" id="author" placeholder="Tác giả" required>
+            <input type="number" id="year" placeholder="Năm xuất bản" required>
+            <button type="submit">Thêm sách</button>
+        </form>
+        <table id="book-list">
+            <thead>
+                <tr>
+                    <th>Tên sách</th>
+                    <th>Tác giả</th>
+                    <th>Năm</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Danh sách sách sẽ được hiển thị ở đây -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
